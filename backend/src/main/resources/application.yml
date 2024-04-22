@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: spring-chat
+
+langchain4j:
+  ollama:
+    chat-model:
+      baseUrl: http://localhost:11434
+      modelName: llama3
+      temperature: 0
+      timeout: 60s
+      logRequests: true
+      logResponse: true
+      maxRetries: 1
+
+logging:
+  level:
+    dev.langchain4j: DEBUG
+    dev.ai4j.openai4j: DEBUG
+
+debug: true
