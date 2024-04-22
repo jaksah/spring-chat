@@ -1,9 +1,14 @@
 # Spring Chat
 Simple application for generating a SQL query from user input based on a database schema.
+Core technologies used:
+- Kotlin
+- Spring Boot
+- [LangChain4j](https://docs.langchain4j.dev/)
+- Next.js
 
 ## Requirements / Developed with
 - Node.js v20.10.0
-- Ollama 0.1.32
+- [Ollama](https://ollama.com/) 0.1.32
 - Java 21
 
 ## How to run
