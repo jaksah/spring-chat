@@ -25,13 +25,16 @@ repositories {
 
 dependencies {
 	implementation("org.springframework.boot:spring-boot-starter-webflux")
+	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
 	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
 	implementation("io.projectreactor.kotlin:reactor-kotlin-extensions")
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 	implementation("org.jetbrains.kotlinx:kotlinx-coroutines-reactor")
 	implementation("dev.langchain4j:langchain4j-spring-boot-starter:0.30.0")
 	implementation("dev.langchain4j:langchain4j-ollama-spring-boot-starter:0.30.0")
+//	implementation("dev.langchain4j:langchain4j-open-ai-spring-boot-starter:0.30.0")
 	implementation("dev.langchain4j:langchain4j-embeddings-all-minilm-l6-v2:0.30.0")
+	runtimeOnly("com.mysql:mysql-connector-j")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	testImplementation("io.projectreactor:reactor-test")
 }

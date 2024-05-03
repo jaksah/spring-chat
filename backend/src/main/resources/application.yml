@@ -1,6 +1,14 @@
 spring:
   application:
     name: spring-chat
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/test
+    username: root
+    password: password
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    show-sql: true
+    database-platform: org.hibernate.dialect.MySQL8Dialect
 
 langchain4j:
   ollama:
@@ -9,9 +17,16 @@ langchain4j:
       modelName: llama3
       temperature: 0
       timeout: 60s
-      logRequests: true
-      logResponse: true
+      log-requests: true
+      log-responses: true
       maxRetries: 1
+  open-ai:
+    chat-model:
+      api-key: ${OPENAI_API_KEY}
+      model-name: gpt-3.5-turbo
+      temperature: 0.0
+      log-requests: true
+      log-responses: true
 
 logging:
   level:

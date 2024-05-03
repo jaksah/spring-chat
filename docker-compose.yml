@@ -18,6 +18,13 @@ services:
       - frontend:/app
     depends_on:
       - backend
+  database:
+    image: arm64v8/mysql
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: test
 
 volumes:
   backend:
